@@ -1,0 +1,165 @@
+.main #content{
+    padding: 65px 15px 0;
+}
+
+.main .sidebar{
+    background:white;
+    padding-top:15px;
+    box-shadow:0 0 12px rgba(58, 51, 46, 0.45);
+    margin-left: 2%;
+    border-radius:5px;
+}
+
+.date{
+    color: white;
+    font-family: calibri;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.timer-col #minutes{
+    padding: 0 5px;
+}
+.search-form-widget button, .subscribe button{
+    background: #142C4C;
+    border: #142C4C;
+    color:white;
+}
+
+.post h4 a{
+    color: #142C4C;
+    text-decoration: none;
+    font-size:19px;
+}
+
+.time{
+    color:#fff;
+    text-transform: uppercase;
+    font-family:calibri;
+}
+.cityInput{
+    text-align: center;
+    margin-bottom: 0;
+    height: 25px;
+    color:red;
+    font-family: calibri;
+}
+.city-col{
+    display: flex;
+    align-self: flex-end;
+
+}
+.icons-col{
+    /*display: flex;*/
+    /*background: red;*/
+}
+
+#counter .activeTime{
+    background: #F69C1F;
+    color:#142C4C;
+}
+
+#counter #minutes{
+    color: #142c4c;
+}
+
+.navigation > ul > li > a{
+    font-family: Calibri;
+    font-weight: bold;
+    color: #142C4C;
+}
+.navigation > ul > li:hover{
+    background: #142c4c;
+}
+.navigation > ul > li> a:hover{
+    color: white;
+}
+.posts-archive{
+    background:white;
+    padding-top:15px;
+    box-shadow:0 0 12px rgba(58, 51, 46, 0.45);
+    border-radius:5px;
+}
+.site-footer{
+    background: #142C4C;
+}
+
+footer h4{
+    background: #D9DBD8;
+    color: #142c4c;
+    padding:5px;
+    text-align: center;
+    border-radius: 7px 7px 0 0;
+}
+footer img{
+    background: #fff;
+    border-radius: 0 0 7px 7px;
+}
+
+footer .footer-widget{
+    border-radius: 0 0 7px 7px;
+}
+.Islamic_t{
+    color: #142c4c;
+    padding: 0 5px;
+    background: #eceae4;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+
+@media(max-width:991px){
+    .parallax img{
+        display:none;
+    }
+
+    .main #content{
+        padding: 15px 15px 0;
+    }
+
+    .main .col-md-9{
+        margin-bottom: 15px;
+    }
+
+    .main .col-md-3{
+        margin-left: 0;
+    }
+
+    .site-footer{
+        margin-top: 0;
+    }
+    .date-col{
+        order: 1;
+        width:50%;
+
+    }
+    .icons-col{
+        order:2;
+        width:50%;
+
+    }
+    .city-col{
+        order:3;
+        width:50%;
+
+    }
+    .time-col{
+        order:4;
+        width:50%;
+
+    }
+
+}
+
+@media(max-width:767px){
+    .sidebar{
+        margin-top: 0;
+    }
+    .site-footer{
+        margin-top: 15px;
+    }
+}
+
+
