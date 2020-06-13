@@ -109,6 +109,10 @@ foreach ($array as $key => $value) {
         <div class="notice-bar" style="background: #142C4C">
             <div class="container">
                 <div class="row" style="display: flex;align-items: flex-start; flex-wrap:wrap; justify-content: space-around">
+                    <div class="col-md-12 hidden-md site-name">
+                        <h3 style="color:white;text-transform: uppercase;font-family: Calibri;text-align: center;font-weight: bold">ahlisunnat</h3>
+                    </div>
+
                     <div class="col-md-3 notice-bar-title date-col" >
                         <span class="notice-bar-title-icon hidden-xs">
                             <i class="fa fa-calendar fa-3x" style="color:white"></i>
@@ -166,7 +170,7 @@ foreach ($array as $key => $value) {
                         </div>
                     </div>
 
-                    <a href="#" class="visible-sm visible-xs menu-toggle" style="position: absolute;right: 10px;top: 0;"><i class="fa fa-bars" style="color:white;"></i></a> </div>
+                    <a href="#" class="visible-sm visible-xs menu-toggle" style="position: absolute;right: 10px;top: 0; z-index:10"><i class="fa fa-bars" style="color:white;"></i></a> </div>
                 </div>
             </div>
 
@@ -174,7 +178,7 @@ foreach ($array as $key => $value) {
     <!-- End Site Header -->
 
     <!-- Start Nav Backed Header -->
-    <div class="  parallax" >
+    <div class="parallax" >
         <img src="images/header2.png"  alt="" style="width:100%" class="">
     </div>
 

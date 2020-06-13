@@ -2761,7 +2761,7 @@ span.progress-bar-tooltip:after {
 		height:auto;
 		position:absolute;
 		left:0;
-		top:80px;
+		top:44px;
 		z-index:9999;
 		width:100%
 	}
