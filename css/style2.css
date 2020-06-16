@@ -68,11 +68,12 @@
     font-family: Calibri;
     font-weight: bold;
     color: #142C4C;
+    /*color: #fff;*/
 }
 .navigation > ul > li:hover{
     background: #142c4c;
 }
-.navigation > ul > li> a:hover, .navigation > ul > li > ul > li > .container:hover{
+.navigation > ul > li> a:hover, .sfHover:hover{
     color: white;
 }
 .posts-archive{

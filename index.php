@@ -99,7 +99,7 @@ foreach ($array as $key => $value) {
 
 
 </head>
-<body style="background: url(images/uzor.png);" class="real-accessability-body">
+<body class="real-accessability-body">
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 <![endif]-->
@@ -109,7 +109,7 @@ foreach ($array as $key => $value) {
         <div class="notice-bar" style="background: #142C4C">
             <div class="container">
                 <div class="row" style="display: flex;align-items: flex-start; flex-wrap:wrap; justify-content: space-around">
-                    <div class="col-md-12 hidden-md site-name">
+                    <div class="col-md-12 hidden-lg hidden-md site-name">
                         <h3 style="color:white;text-transform: uppercase;font-family: Calibri;text-align: center;font-weight: bold">ahlisunnat</h3>
                     </div>
 
@@ -178,8 +178,247 @@ foreach ($array as $key => $value) {
     <!-- End Site Header -->
 
     <!-- Start Nav Backed Header -->
-    <div class="parallax" >
+    <style>
+        @keyframes animatedBackground {
+        0 {
+            background-position: 100% 0
+        }
+        100% {
+            background-position:  -100px 0 /* анимируем свойство background-position */
+        }
+        }
+
+
+        /* Safari 4.0+, Chrome 4.0+ */
+        @-webkit-keyframes animatedBackground {
+        0 {
+            background-position: 100% 0
+        }
+        100% {
+            background-position:  -100px 0
+        }
+        }
+
+        /* не нужно использовать префикс -ms, так как свойства keyframes и animation поддерживаются с версии IE10 без префикса */
+        #fon{
+            height: 100%;
+            width:100%;
+            background-image: url('images/header_bg_uzor.png');
+            animation: animatedBackground 20s  linear 0s normal none infinite;
+            -moz-animation: animatedBackground 20s  linear 0s normal none infinite;
+            -webkit-animation: animatedBackground 20s  linear 0s normal none infinite;
+            -o-animation: animatedBackground 20s  linear 0s normal none infinite;
+
+            /* так же, как и с @keyframes, префикс -ms тут ни к чему */
+        }
+
+
+        .v-center {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        .plr-5{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translate(0px, 0px) rotate(0deg);
+
+            }
+            25% {
+                transform: translate(-3px, 0px) rotate(0deg);
+
+            }
+            50% {
+                transform: translate(3px, 0px) rotate(0deg);
+
+            }
+            75% {
+                transform: translate(-3px, 0px) rotate(0deg);
+
+            }
+
+            100% {
+                transform: translate(0px, 0px) rotate(0deg);
+
+            }
+        }
+        @keyframes shakes {
+            0% {
+                transform: translate(0px, 0px) rotate(0deg);
+
+            }
+            25% {
+                transform: translate(3px, 0px) rotate(0deg);
+
+            }
+            50% {
+                transform: translate(-3px, 0px) rotate(0deg);
+
+            }
+            75% {
+                transform: translate(3px, 0px) rotate(0deg);
+
+            }
+
+            100% {
+                transform: translate(0px, 0px) rotate(0deg);
+
+            }
+        }
+        @keyframes shakess {
+            0% {
+                transform: translate(0px, 0px) rotate(0deg);
+
+            }
+            25% {
+                transform: translate(0px, 3px) rotate(0deg);
+
+            }
+            50% {
+                transform: translate(0px, -3px) rotate(0deg);
+
+            }
+            75% {
+                transform: translate(0px, 3px) rotate(0deg);
+
+            }
+
+            100% {
+                transform: translate(0px, 0px) rotate(0deg);
+
+            }
+        }
+        @keyframes shakesss {
+            0% {
+                transform: translate(0px, 0px) rotate(0deg);
+
+            }
+            25% {
+                transform: translate(0px, -3px) rotate(0deg);
+
+            }
+            50% {
+                transform: translate(0px, 3px) rotate(0deg);
+
+            }
+            75% {
+                transform: translate(0px, -3px) rotate(0deg);
+
+            }
+
+            100% {
+                transform: translate(0px, 0px) rotate(0deg);
+
+            }
+        }
+
+        @keyframes animatedBackgrounds {
+        0 {
+            background-position-x: 100%
+        }
+        100% {
+            background-position-x:  2000px  /* анимируем свойство background-position */
+        }
+        }
+
+        @keyframes animatedBackgroundss {
+        0 {
+            background-position-x: 100%
+        }
+        100% {
+            background-position-x:  2000px  /* анимируем свойство background-position */
+        }
+        }
+        #cloud{
+            position: absolute;
+            height: 250px;
+            width: 100%;
+            background-image: url(/images/cloud.png);
+            /*background-repeat: no-repeat;*/
+            background-size: 655px;
+            background-position-y: 5px;
+            /* top: 30px; */
+            z-index: 1;
+            animation: animatedBackgrounds 101s  linear 0s normal none infinite;
+        }
+        #clouds{
+            /* opacity: 0.77; */
+            position: absolute;
+            height: 250px;
+            width: 100%;
+            background-image: url(/images/cloud.png);
+            /* background-repeat: no-repeat; */
+            background-size: 510px;
+            background-position-y: -145px;
+            background-repeat: repeat-x;
+            /* top: 30px; */
+            /* z-index: 1; */
+            animation: animatedBackgroundss 201s linear 0s normal none infinite;
+        }
+        .dva {
+            content: "";
+            position: absolute;
+            top: 50px;
+            left: 45px;
+            width: 65%;
+            height: 65%;
+            background: linear-gradient(to left, rgba(255,255,255,.0), rgba(255,255,255,.8), rgba(255,255,255,.0)) no-repeat -2em 0%;
+            background-size: 2em 100%;
+
+            animation: 2s animatd infinite;
+            /*animation-delay: 10s;*/
+            filter: blur(14px);
+        }
+        @keyframes animatd {
+        0 {
+            background-position-x: 100%
+        }
+        100% {
+            background-position-x:  250%  /* анимируем свойство background-position */
+        }
+    </style>
+    <!--<div class="parallax" >
         <img src="images/header2.png"  alt="" style="width:100%" class="">
+    </div>-->
+    <div class="parallax" style="height: 250px; overflow: hidden">
+        <div id="fon">
+            <div id="cloud"></div>
+            <div id="clouds"></div>
+            <div class="container">
+
+                <!-- <img src="/images/cloud.png">-->
+                <div class="row" style="height: 235px;">
+                    <div class="col-md-2 v-center plr-5" style="padding: 15px">
+                        <img src="/images/1.png" class="img-fluid" style="animation: shake 9s;animation-iteration-count: infinite;">
+                    </div>
+                    <div class="col-md-1 v-center plr-5">
+                        <img src="/images/2.png" class="img-fluid" style="animation: shakess 13s;animation-iteration-count: infinite;">
+                    </div>
+                    <div class="col-md-1 v-center plr-5">
+                        <img src="/images/3.png" class="img-fluid" style="animation: shakesss 13s;animation-iteration-count: infinite;">
+                    </div>
+                    <div class="col-md-3 v-center plr-5" style="padding: 20px">
+                        <div id="dva" class=""></div>
+                        <img src="/images/4.png" class="">
+                    </div>
+                    <div class="col-md-1 v-center plr-5">
+                        <img src="/images/5.png" class="img-fluid" style="animation: shakesss 13s;animation-iteration-count: infinite;">
+                    </div>
+                    <div class="col-md-1 v-center plr-5">
+                        <img src="/images/6.png" class="img-fluid" style="animation: shakess 13s;animation-iteration-count: infinite;">
+                    </div>
+                    <div class="col-md-2 v-center plr-5" style="padding: 15px">
+                        <img src="/images/7.png" class="img-fluid" style="animation: shakes 9s;animation-iteration-count: infinite;">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="main-menu-wrapper">
@@ -245,7 +484,6 @@ foreach ($array as $key => $value) {
         <div id="content" class="content full" >
             <div class="container">
                 <div class="row ">
-
                     <div class="col-md-9 posts-archive" >
                         <article class="post ">
                             <div class="row">
@@ -275,9 +513,7 @@ foreach ($array as $key => $value) {
                                     <p class="justify-content" style="text-align: justify" >Савол: Бидъат аҳлининг ибодатлари қабул бўлмаслиги ҳақида ҳадис борми? Бор бўлса, унинг уйдирма эмаслигини қандай билишимиз мумкин?
                                         Жавоб: Ижтиҳод орқали чиқарилган хоҳлаган бир ҳукм, ҳеч қачон бошқа ижтиҳод натижасида чиқарилган ҳукм туфайли ўз кучини йўқотмаганидек хоҳлаган бир олим ҳам бошқа бир олимнинг китобида ўтган ҳадисга "уйдирма" дегани билан бу ҳадис барча олимлар наздида "уйдирма" деган ёрлиққа эга бўлмайди. Бундан ташқари, ҳозирги аксарият имом, қори каби диний хизмат вакиллари ҳам "саҳиҳ бўлиш" билан "қабул бўлиш" орасидаги фарқни билишмайди. Қуйида бу борада бироз изоҳотлар берилади:
                                         Бидъат аҳлининг ибодатлари қабул бўлмаслиги ҳақида кўплаган ҳадиси шарифлар бор. Бир ҳадиси шарифда “Бидъат аҳлининг намози, рўзаси, ҳажжи, умраси, жиҳоди, тавбаси, фарзи, нофиласи ва ҳеч қандай яхшилиги қабул бўлмайди. Ундайларнинг диндан чиқиши худди сарёғдан қил суғургандек осон бўлади” деб марҳамат қилинди. (Ибн Можа)
-
                                     </p>
-
                                     <p style="float:right"><a href="#" class="btn btn-primary batafsil">Батафсил <i class="fa fa-long-arrow-right"></i></a></p>
                                 </div>
                             </div>
@@ -285,16 +521,13 @@ foreach ($array as $key => $value) {
                         <article class="post ">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
-
                                     <h4><a href="single-event.html">Шаввол ойида рўза тутиш</a></h4>
                                     <span class="post-meta meta-data"> <span><i class="fa fa-calendar"></i> 28th Jan, 2014</span><span><i class="fa fa-archive"></i> <a href="#">Uncategorized</a></span> <span><a href="#"><i class="fa fa-comment"></i> 12</a></span></span>
                                     <p style="text-align: justify" >Савол: Бидъат аҳлининг ибодатлари қабул бўлмаслиги ҳақида ҳадис борми? Бор бўлса, унинг уйдирма эмаслигини қандай билишимиз мумкин? Жавоб: Ижтиҳод орқали чиқарилган хоҳлаган бир ҳукм, ҳеч қачон бошқа ижтиҳод натижасида чиқарилган ҳукм туфайли ўз кучини йўқотмаганидек хоҳлаган бир олим ҳам бошқа бир олимнинг китобида ўтган ҳадисга "уйдирма" дегани билан бу ҳадис барча олимлар наздида "уйдирма" деган ёрлиққа эга бўлмайди. Бундан ташқари, ҳозирги аксарият имом, қори каби диний хизмат вакиллари ҳам "саҳиҳ бўлиш" билан "қабул бўлиш" орасидаги фарқни билишмайди. Қуйида бу борада бироз изоҳотлар берилади: Бидъат аҳлининг ибодатлари қабул бўлмаслиги ҳақида кўплаган ҳадиси шарифлар бор. Бир ҳадиси шарифда “Бидъат аҳлининг намози, рўзаси, ҳажжи, умраси, жиҳоди, тавбаси, фарзи, нофиласи ва ҳеч қандай яхшилиги қабул бўлмайди. Ундайларнинг диндан чиқиши худди сарёғдан қил суғургандек осон бўлади” деб марҳамат қилинди. (Ибн Можа)</p>
-
                                     <p style="float:right"><a href="#" class="btn btn-primary batafsil">Батафсил <i class="fa fa-long-arrow-right"></i></a></p>
                                 </div>
                             </div>
                         </article>
-
                         <ul class="pagination">
                             <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
                             <li class="active"><a href="#">1</a></li>
@@ -644,6 +877,16 @@ foreach ($array as $key => $value) {
 
     }
     //  https://namaztimes.kz/api/praytimes?id=20720&type=json
+
+    setInterval(alertFunc, 10000);
+    function alertFunc() {
+        document.getElementById("dva").classList.add("dva");
+        setTimeout(alertFuncs,1000);
+        //document.getElementById("dva").classList.add("dva");
+    }
+    function alertFuncs() {
+        document.getElementById("dva").classList.remove("dva");
+    }
 
 </script>
 
